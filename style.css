@@ -158,3 +158,24 @@ button:disabled {
   margin: 0.2rem 0;
   color: var(--muted);
 }
+
+.reference-image {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #f2f9ff;
+}
+
+.character-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-right: 0.45rem;
+  margin-bottom: 0.3rem;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid #d9e8f8;
+  border-radius: 999px;
+  background: #f8fcff;
+  color: #375777;
+  font-size: 0.84rem;
+}

@@ -101,6 +101,33 @@ const CHARACTERS = {
 
 const BASE_ITEMS = ["공", "시럽", "마법봉", "나사", "바람의 망토", "장난감 기차", "인형 탈", "떡방아", "망원경", "파도머신", "마법의 가루"];
 
+const CHARACTER_EMOJI = {
+  잼민리: "🧢🦆",
+  탐관오리: "🎩🦆",
+  똘망리: "🎀🦆",
+  모야리: "😅🦆",
+  오리리: "✨🦆",
+  댕댕리: "🐶🦆",
+  까칠리: "😾🦆",
+  써든리: "🔩🦆",
+  로봇리: "🤖",
+  인형리: "🧸",
+  꿀떡리: "🍯🦆",
+  쪼꼬리: "🍫🦆",
+  과일리: "🍓🦆",
+  쿠키리: "🍪",
+  천문학리: "🔭🦆",
+  별리: "⭐🦆",
+  파도리: "🌊🦆",
+  펭귄리: "🐧",
+  요정리: "🧚",
+  마녀리: "🧙",
+};
+
+function characterBadge(name) {
+  return `${CHARACTER_EMOJI[name] || "🦆"} ${name}`;
+}
+
 const state = {
   day: 1,
   generation: 1,
@@ -372,7 +399,8 @@ function renderMapSelect() {
   const selectedMap = MAPS[select.value] || MAPS.hotel;
   const mapInfo = document.getElementById("map-info");
   mapInfo.innerHTML = `
-    <p>출현 캐릭터: ${selectedMap.characters.join(", ")}</p>
+    <p>출현 캐릭터:</p>
+    <div>${selectedMap.characters.map((name) => `<span class="character-tag">${characterBadge(name)}</span>`).join("")}</div>
     <p>상점 아이템: ${selectedMap.shopItems.join(", ")}</p>
     <p>해금 조건: ${selectedMap.unlockDescription}</p>
   `;
@@ -420,7 +448,7 @@ function renderRelationships() {
       const row = document.createElement("div");
       row.className = "rel-row";
       row.innerHTML = `
-        <h4>${name}</h4>
+        <h4>${characterBadge(name)}</h4>
         <p>호감도: ${points}</p>
         <p>관계: ${relation}</p>
       `;
