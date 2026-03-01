@@ -1,0 +1,25 @@
+<TextureAtlas imagePath="duck-cast.png">
+  <SubTexture name="jammin" x="20" y="15" width="245" height="225"/>
+  <SubTexture name="tamgwan" x="285" y="15" width="245" height="225"/>
+  <SubTexture name="ddol" x="550" y="15" width="245" height="225"/>
+  <SubTexture name="moya" x="815" y="15" width="245" height="225"/>
+  <SubTexture name="ori" x="1080" y="15" width="245" height="225"/>
+
+  <SubTexture name="dengdeng" x="20" y="260" width="245" height="225"/>
+  <SubTexture name="kkachil" x="285" y="260" width="245" height="225"/>
+  <SubTexture name="sseodeun" x="550" y="260" width="245" height="225"/>
+  <SubTexture name="robot" x="815" y="260" width="245" height="225"/>
+  <SubTexture name="doll" x="1080" y="260" width="245" height="225"/>
+
+  <SubTexture name="honey" x="20" y="505" width="245" height="225"/>
+  <SubTexture name="choco" x="285" y="505" width="245" height="225"/>
+  <SubTexture name="fruit" x="550" y="505" width="245" height="225"/>
+  <SubTexture name="cookie" x="815" y="505" width="245" height="225"/>
+  <SubTexture name="astro" x="1080" y="505" width="245" height="225"/>
+
+  <SubTexture name="star" x="20" y="750" width="245" height="225"/>
+  <SubTexture name="wave" x="285" y="750" width="245" height="225"/>
+  <SubTexture name="penguin" x="550" y="750" width="245" height="225"/>
+  <SubTexture name="fairy" x="815" y="750" width="245" height="225"/>
+  <SubTexture name="witch" x="1080" y="750" width="245" height="225"/>
+</TextureAtlas>

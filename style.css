@@ -1,0 +1,118 @@
+:root {
+  --bg: #f4f8ff;
+  --panel: #ffffff;
+  --line: #d6e5f5;
+  --text: #21364d;
+  --muted: #6282a1;
+  --primary: #3d84c6;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+}
+
+.app-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(90deg, #def0ff, #f8fbff);
+}
+.app-header h1 { margin: 0; }
+.app-header p { margin: 0.3rem 0 0; color: var(--muted); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+#relationship-panel,
+#log-panel {
+  grid-column: span 2;
+}
+
+#game-root {
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ebf5ff;
+}
+
+.hint { color: var(--muted); font-size: 0.9rem; margin-top: 0.75rem; }
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+button, select {
+  font: inherit;
+  border-radius: 10px;
+}
+button {
+  border: 1px solid var(--primary);
+  background: #fff;
+  color: var(--primary);
+  padding: 0.55rem 0.7rem;
+  cursor: pointer;
+}
+button:hover { background: #eef6ff; }
+
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  padding: 0.45rem;
+  margin: 0.4rem 0;
+}
+
+#map-info,
+#duck-info,
+#relationship-list,
+#event-log {
+  color: var(--muted);
+}
+
+#event-log {
+  max-height: 240px;
+  overflow: auto;
+  padding-left: 1rem;
+}
+
+.rel-row {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.45rem 0.6rem;
+  margin-bottom: 0.45rem;
+}
+
+code {
+  background: #eef5ff;
+  border: 1px solid #d7e5f7;
+  border-radius: 6px;
+  padding: 0.05rem 0.35rem;
+}
+
+@media (max-width: 1080px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  #relationship-panel,
+  #log-panel {
+    grid-column: span 1;
+  }
+}
