@@ -1,0 +1,160 @@
+:root {
+  color-scheme: light;
+  --bg: #f7fbff;
+  --panel: #ffffff;
+  --border: #dbe8f4;
+  --primary: #3d84c6;
+  --text: #1d2b3a;
+  --muted: #6b7d90;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-header {
+  padding: 1.2rem;
+  background: linear-gradient(90deg, #dff2ff, #f3f7ff);
+  border-bottom: 1px solid var(--border);
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.app-header p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.layout {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(34, 74, 124, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.duck-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.duck-avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 16px;
+  background: #eff8ff;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  font-size: 2.1rem;
+}
+
+.duck-info {
+  line-height: 1.45;
+}
+
+.action-grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.action-grid.single {
+  grid-template-columns: 1fr;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+button {
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  background: #fff;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+button:hover {
+  background: #eef6ff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#map-select {
+  width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+#event-log {
+  margin: 0;
+  padding-left: 1rem;
+  max-height: 220px;
+  overflow: auto;
+}
+
+#event-log li {
+  margin-bottom: 0.35rem;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  background: #ebf5ff;
+  border: 1px solid #c9e5ff;
+  color: #1f5f9d;
+  border-radius: 999px;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.75rem;
+}
+
+.item-row,
+.rel-row {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-row h4,
+.rel-row h4 {
+  margin: 0 0 0.3rem;
+}
+
+.item-row p,
+.rel-row p,
+#map-info p {
+  margin: 0.2rem 0;
+  color: var(--muted);
+}
